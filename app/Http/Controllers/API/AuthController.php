@@ -89,6 +89,8 @@ class AuthController extends Controller
                 'id'    => $userData['id'],
                 'name'  => $userData['name'],
                 'email' => $userData['email'],
+                'roles' => $userData['roles'] ?? [],
+                'permissions' => $userData['permissions'] ?? []
             ]
         ]);
     }
