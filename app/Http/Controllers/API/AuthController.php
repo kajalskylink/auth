@@ -44,27 +44,6 @@ class AuthController extends Controller
         ]);
     }
 
-    // public function login(Request $request)
-    // {
-    //     $user = User::where('email', $request->email)->first();
-    //     // $user = $this->apiService->checkUser($request);
-
-    //     if (! $user || ! Hash::check($request->password, $user->password)) {
-    //         return response()->json([
-    //             'error' => 'Invalid credentials'
-    //         ], 401);
-    //     }
-
-    //     $token = Str::random(60);
-    //     $user->update(['api_token' => $token]);
-
-    //     return response()->json([
-    //         'message' => 'Login successful',
-    //         'token'   => $token,
-    //         'user'    => $user
-    //     ]);
-    // }
-
     public function login(Request $request)
     {
         $response = $this->apiService->checkUser($request); // Http response
